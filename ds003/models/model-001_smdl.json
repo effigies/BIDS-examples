@@ -15,7 +15,7 @@
         {
           "Name": "Convolve",
           "Input": ["trial_type.word", "trial_type.pseudoword"],
-          "Model": "FSLDoubleGamma"
+          "Model": "SPMCanonical"
         }
       ],
       "Model": {
