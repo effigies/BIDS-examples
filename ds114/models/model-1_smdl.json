@@ -6,7 +6,7 @@
   },
   "Steps": [
     {
-      "Level": "run",
+      "Level": "Run",
       "Transformations": [
         {
           "Name": "Factor",
@@ -15,7 +15,7 @@
         {
           "Name": "Convolve",
           "Input": ["trial_type.Finger", "trial_type.Foot", "trial_type.Lips"],
-          "Model": "DoubleGamma"
+          "Model": "FSLDoubleGamma"
         }
       ],
       "Model": {
@@ -29,8 +29,8 @@
           "a_comp_cor_03", "a_comp_cor_04", "a_comp_cor_05"
         ],
         "Options": {
-          "high_pass_filter_cutoff_secs": 128
-        },
+          "HighPassFilterCutoffSecs": 128
+        }
       },
       "Contrasts": [
         {
@@ -42,11 +42,11 @@
           ],
           "Weights": [1, -0.5, -0.5],
           "Type": "t"
-        },
+        }
       ]
     },
     {
-      "Level": "subject",
+      "Level": "Subject",
       "Transformations": [
         {
           "Name": "Split",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "Level": "dataset",
+      "Level": "Dataset",
       "AutoContrasts": ["test_vs_retest"]
     }
   ]
