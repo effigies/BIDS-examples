@@ -6,7 +6,7 @@
   },
   "Steps": [
     {
-      "Level": "run",
+      "Level": "Run",
       "Transformations": [
         {
           "Name": "Factor",
@@ -15,7 +15,7 @@
         {
           "Name": "Convolve",
           "Input": ["trial_type.word", "trial_type.pseudoword"],
-          "Model": "DoubleGamma"
+          "Model": "SPMCanonical"
         }
       ],
       "Model": {
@@ -28,8 +28,8 @@
           "a_comp_cor_03", "a_comp_cor_04", "a_comp_cor_05"
         ],
         "Options": {
-          "high_pass_filter_cutoff_secs": 128
-        },
+          "HighPassFilterCutoffSecs": 128
+        }
       },
       "Contrasts": [
         {
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "Level": "dataset",
+      "Level": "Dataset",
       "AutoContrasts": true
     }
   ]
